@@ -1,0 +1,41 @@
+Costo=int(input("Escriba el consumo de agua con m3:  "))
+
+personas=int(input("escriba el numero de habitantes:  "))
+
+
+
+if 0<Costo<15:
+    print("la tatrida es de Q5.00")
+
+
+elif 15<=Costo<=30:
+    if personas>3:
+        print("el costo de la tarifa es: Q4.00")
+    elif 3<=personas<=3:
+        print("el costo de la tarifa es: Q4.50")
+
+
+    else:
+        print("la tarifa de cualquier otro caso es de: Q5.00")
+
+
+print()
+print()
+
+placa=input("Ingrese la placa del vehículo: ")
+digito=int(placa[-1])
+
+
+if digito in [0, 2, 4, 6, 8]:
+    print("no puede circular en  los lunes")
+elif digito in [1, 3, 5, 7, 9]:
+    print("no puede  circular en los viernes")
+
+    if placa >= 2000 or placa % 2 == 0:
+        print("en los  sábados solo circula hasta el mediodía")
+
+    if 2025 - placa > 25:
+            print("debe hacer mantenimiento obligatorio ")
+            
+
+
