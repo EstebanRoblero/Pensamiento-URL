@@ -1,0 +1,23 @@
+saldo=3000
+intentos=3
+
+while True:
+    print(f"Saldo actual: Q{saldo}")
+    monto=int(input("Ingrese el monto que desea retirar o si no ponga 0 para poder salir:   "))
+    
+    if monto==0:
+        print("Solicitud aprobada termino sesión")
+        break
+    
+    if monto>saldo:
+        intentos-=1
+        print(f"Saldo insuficiente. Intentos restantes: {intentos}")
+        if intentos==0:
+            print("Muchos intentos fallidos termina sesión")
+            break
+    else:
+        saldo-=monto
+        print(f"Su retiro fue exitoso: su nuevo saldo es de: Q{saldo}")
+        if saldo==0:
+            print("su Saldo se ha agotado sesión terminada")
+            break
