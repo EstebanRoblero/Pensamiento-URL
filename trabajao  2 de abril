@@ -1,0 +1,15 @@
+n=10
+total=n
+suma=0
+while total >0:
+    numero=int(input("introduzca un numero"))
+    suma=suma+numero
+    total=total-1
+print(suma)
+
+
+
+
+   
+
+
