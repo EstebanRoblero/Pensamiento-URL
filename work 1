@@ -1,0 +1,127 @@
+#ejercicio 1
+
+#def es_par_o_imnpar(n):
+    #if n %2==0:
+        #print("es par")
+    #else:
+        #print("no es par")
+
+#ejercicio 2
+
+#es_par_o_imnpar(2)
+
+#def suma_lista(lista):
+    #suma=0
+    #for numero in lista:
+       #suma+=numero
+    #return suma
+#resultado=suma_lista([1,2,3])
+#print(resultado)
+
+#ejercicio 3
+
+#def cuenta_regresiva (n):
+    #if n<0:
+        #print("despliegue")
+
+    #else:
+        #print(n)
+        #cuenta_regresiva(n-1)
+
+#cuenta_regresiva(5)
+
+#ejercicio 4
+
+#def cuenta_descendente (n):
+    #if n==0:
+        #return
+        
+
+    #else: 
+        #cuenta_descendente (n-1)
+        #print(n)
+
+#num=int(input("ingrese un numero"))
+#cuenta_descendente (num)
+
+# ejercicio 5
+
+#def suma_hasta(n):
+    #if n==0:
+        #return 0
+        
+
+    
+    #else: 
+        #return n + suma_hasta(n-1)
+
+#num=int(input("ingrese un numero"))
+#print(suma_hasta (num))
+
+# ejercicio 5
+
+#def suma_hasta(n):
+    #if n==0:
+        #return 0
+        
+
+    
+    #else: 
+        #return n + suma_hasta(n-1)
+
+#num=int(input("ingrese un numero"))
+#print(suma_hasta (num))
+
+#ejercicio 6
+
+#def factoral(n):
+    #if n==0 or n==0:
+        #return 1
+        
+
+    
+    #else: 
+        #return n * factoral(n-1)
+
+#num=int(input("ingrese un numero"))
+#print(factoral (num))
+
+
+#ejercico 7
+#Mínimo en lista (sin min())
+#Crear una función recursiva minimo(lista) que devuelva el valor más pequeño de una lista
+#de números.
+#Ejemplo:
+#minimo([5, 3, 8, 1, 2]) → 1
+
+#def minimo (lista):
+    #if len (lista)==1:
+         #return lista [0]
+    #else:
+     #minimo_rest = minimo[1:0]
+     #return lista[0] if lista[0] < minimo_rest else minimo_rest
+
+#juego ejercicio 8
+
+def adivina_numero(numero_secreto , intento):
+    if intento==0:
+        print("se acabo cualquier intento")
+        return
+    num=int(input("HOLA adivina el numero VAMOOS:  "))
+    if num==numero_secreto:
+        print("BIEN ECHO LO ADIVINASTE")
+    else:
+        print("Error ese no es el numero intentalo nuevamente")
+        adivina_numero(numero_secreto, intento-1)
+
+numero_secreto =2
+
+print("QUE TAL SE BIENVENIDO AL JUEGO DE ADIVINAR EL NUMERO SECRETO PERO SHHH")
+print("PUEDES ELEJIR UN NUMERO ENTRE 1 Y 1000, BUENA SUERTE")
+
+
+adivina_numero(numero_secreto, 2)
+
+
+
+    
