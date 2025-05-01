@@ -1,0 +1,148 @@
+class Animal:
+    def __init__(self, nombre, edad, peso):
+        self.nombre=nombre
+        self.edad=edad
+        self.peso=peso
+
+    def mostrar_datos(self):
+        print(f"su nombre es:{self.nombre},Edad: {self.edad} años,Peso: {self.peso} kg")
+
+    def calcular_dosis(self):
+        dosis = self.peso * 0.1
+        print(f"la dosis recomendada es: {dosis} ml")
+
+    def ficha_1(self):
+        self.mostrar_datos()
+        self.calcular_dosis()
+
+
+class Perro(Animal):
+    def __init__(self, nombre, edad, peso, raza):
+        super().__init__(nombre, edad, peso)
+        self.raza=raza
+
+    def calcular_dosis(self):
+        dosis=self.peso*0.2
+        print(f"la dosis recomendada del perro es: {dosis} ml")
+
+    def mostrar_datos(self):
+        super().mostrar_datos()
+        print(f"la raza es: {self.raza}")
+
+
+
+class Gato(Animal):
+    def __init__(self, nombre, edad, peso, raza):
+        super().__init__(nombre, edad, peso)
+        self.raza=raza
+
+    def calcular_dosis(self):
+        dosis=self.peso*0.15
+        print(f"la dosis recomendada del gato es: {dosis} ml")
+
+    def mostrar_datos(self):
+        super().mostrar_datos()
+        print(f"la raza es: {self.raza}")
+
+class Ave(Animal):
+    def __init__(self, nombre,edad, peso, tamaño):
+        super().__init__(nombre, edad, peso)
+        self.tamaño=tamaño
+    
+    def mostrar_datos(self):
+        super().mostrar_datos()
+        print(f"el tamaño es: {self.tamaño}")
+
+    def calcular_dosis(self):
+        dosis = self.peso * 0.05
+        print(f"la dosis recomendada del ave es: {dosis} ml")
+
+
+class Reptil(Animal):
+    def __init__(self, nombre, edad,peso,color):
+        super().__init__(nombre, edad, peso)
+        self.color=color
+
+    def calcular_dosis(self):
+        dosis=self.peso*0.1
+        print(f"la dosis recomendada del reptil es: {dosis} ml")
+
+    def mostrar_datos(self):
+        super().mostrar_datos()
+        print(f"la raza es: {self.color}")
+
+print("___ficha Clínica___")
+print("______________________")
+perro=Perro("zacatepeq", 2,23,"pitbull")
+perro.ficha_1()
+print("¨______________________")
+gato=Gato("tralarerito", 4, 3.4,"siames")
+gato.ficha_1()
+print("_________________________")
+ave=Ave("pinocho",2,0.4,"mediano")
+ave.ficha_1()
+print("___________________________")
+reptil=Reptil("pirulo",3,11,"azul")
+reptil.ficha_1()
+
+# EJERCICIO 2___________
+
+# class Persona:
+#     def __init__(self, nombre,edad, DNI):
+#         self.nombre=nombre
+#         self.edad=edad
+#         self.DNI=DNI
+    
+
+#     def mostrar_datos(self):
+#         print(f"su nombre es:{self.nombre},Edad: {self.edad} años,NDI ES: {self.DNI}")
+
+#     def datos_persona(self):
+#         self.mostrar_datos()
+        
+
+
+# class Estudiante(Persona):
+#     def __init__(self, nombre, edad, DNI, Grado):
+#         super().__init__(nombre, edad, DNI)
+#         self.Grado=Grado
+
+#     def datos_persona(self):
+#         super().datos_persona()
+#         print(f"Grado es: {self.Grado}")
+
+
+# class Administrativo(Persona):
+#     def __init__(self, nombre,edad, DNI,turno):
+#         super().__init__(nombre, edad, DNI)
+#         self.turno=turno
+
+#     def datos_persona(self):
+#         super().datos_persona()
+#         print(f"el turno  es: {self.turno}")
+
+# class Profesor(Persona):
+#     def __init__(self, nombre, edad, DNI,materia):
+#         super().__init__(nombre, edad, DNI)
+#         self.materia=materia
+
+#     def datos_persona(self):
+#         super().datos_persona()
+#         print(f"la materia que da  es: {self.materia}")
+
+
+# print("___DATOS DE CADA UNO__")
+# print("___________")
+
+# estudiante=Estudiante("zacatepeq", 12,123412,"6 to primaria")
+# estudiante.datos_persona()
+# print("____________")
+# administrativo=Administrativo("Julio", 30,44331144,"mañana")
+# administrativo.datos_persona()
+# print("___________")
+# profesor=Profesor("Tomas",25,123141,"ciencias sociales")
+# profesor.datos_persona()
+
+
+
+
